@@ -1,0 +1,14 @@
+// Copyright (c) 2019 Splunk Inc.
+
+syntax="proto3";
+
+package splunk.trace.firehose;
+
+import "github.com/jaegertracing/jaeger/model/model.proto";
+
+message Kafka {
+    jaeger.api_v2.Span span = 1;
+    int64 orgID = 2;
+    int64 tokenID = 3;
+    int64 ingestTime = 4;
+}	
